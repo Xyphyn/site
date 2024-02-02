@@ -49,9 +49,11 @@
   $: typeData = typeToData(type)
 </script>
 
-<div
-  class="z-10 cursor-pointer group flex flex-col gap-2 relative bg-zinc-900/80 backdrop-blur-sm
-   p-6 rounded-2xl border border-zinc-700 {$$props.class} overflow-hidden"
+<svelte:element
+  this={link ? 'a' : 'div'}
+  href={link}
+  class="w-full z-10 cursor-pointer group flex flex-col gap-2 relative bg-zinc-900
+   p-6 rounded-2xl border border-zinc-700 {$$props.class} overflow-hidden hover:bg-zinc-800 transition-colors"
 >
   <div
     class="absolute scale-95 group-hover:scale-100 transition-all -inset-4 -z-10 opacity-0
@@ -93,7 +95,7 @@
       <Icon src={typeData.icon} mini size="16" />
     </div>
   </div>
-</div>
+</svelte:element>
 
 <style>
   .background-image {
