@@ -1,32 +1,28 @@
 <script lang="ts">
   import Project from '$lib/Project.svelte'
-  import Kotlin from '$lib/logos/Kotlin.svelte'
-  import Svelte from '$lib/logos/Svelte.svelte'
-  import Typescript from '$lib/logos/Typescript.svelte'
 </script>
 
-<div class="flex flex-col gap-4">
-  <div class="my-24 mx-auto flex flex-col gap-8">
-    <h1
-      class=" text-white z-10 text-5xl sm:text-7xl inline-flex items-center mx-auto"
-    >
+<div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-2">
+    <h1 class=" text-white z-10 text-5xl sm:text-7xl inline-flex items-center">
+      <span class="leading-snug float-top">xylight</span>
       <span
-        class="leading-snug float-top bg-gradient-to-r from-pink-600 to-violet-600 bg- text-transparent bg-clip-text"
+        class="bg-gradient-to-r from-pink-600 to-violet-600 text-transparent bg-clip-text"
       >
-        xylight
+        .dev
       </span>
-      <span class="text-zinc-600">.dev</span>
     </h1>
-    <p class="text-lg text-center text-zinc-400">making stupid stuff</p>
-    <div class="flex flex-row gap-4 items-center justify-center">
-      <Svelte width={32} alt="Svelte" />
-      <Kotlin width={32} alt="Kotlin" />
-      <Typescript width={32} alt="Typescript" />
+    <div class="flex flex-row divide-x divided-pad-x divide-zinc-500">
+      <span class="uppercase font-medium">UI design</span>
+      <span class="uppercase font-medium">Svelte</span>
+      <span class="uppercase font-medium">TypeScript</span>
+      <span class="uppercase font-medium">Kotlin</span>
+      <span class="uppercase font-medium">Linux</span>
     </div>
   </div>
 
-  <section class="pt-4 flex flex-col gap-4">
-    <h1 class="text-xl font-bold">Creations</h1>
+  <section class="flex flex-col gap-4">
+    <h1 class="text-xl font-bold">Projects</h1>
 
     <div
       class="grid md:grid-cols-6 grid-cols-1 grid-rows-2 gap-4 min-h-[48rem] w-full"
@@ -76,3 +72,18 @@
     </div>
   </section>
 </div>
+
+<style>
+  .divided-pad-x > * {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .divided-pad-x > :first-child {
+    padding-left: 0;
+  }
+
+  .divided-pad-x > :last-child {
+    padding-right: 0;
+  }
+</style>
